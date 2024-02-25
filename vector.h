@@ -1,4 +1,5 @@
 #include<vector>
+#include"test.h"
 using namespace std;
 vector<int> numbers, numbers_square, numbers_sum, numbers_even, numbers_prime;
 
