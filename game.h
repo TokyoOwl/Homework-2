@@ -2,7 +2,10 @@
 #include<string>
 #include<vector>
 #include<cassert>
+#include<random>
 using namespace std;
+random_device rd;
+mt19937 gen(rd());
 string Name;
 string Answer;
 string Right;
@@ -14,7 +17,13 @@ void get_answ()
 {
 	cin >> Answer;
 }
-vector<int> questions = { 7, 20, 8 };
+int rand_int(int start, int end)
+{
+	uniform_int_distribution<> dist(start, end);
+	int x = dist(gen);
+	return x;
+}
+
 bool is_even(int x) {
 	if (x % 2 == 0) return true;
 	else return false;
