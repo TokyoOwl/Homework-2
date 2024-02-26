@@ -129,10 +129,10 @@
   <ItemGroup>
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="tests.cpp" />
+    <ClCompile Include="maintests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="functions.h" />
+    <ClInclude Include="mainfunctions.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="gametest.cpp" />
   </ItemGroup>

@@ -1,6 +1,6 @@
 #include<vector>
 #include<cassert>
-#include"functions.h"
+#include"mainfunctions.h"
 using namespace std;
 void test_math()
 {
