@@ -25,13 +25,15 @@ int rand_int(int start, int end)
 }
 
 bool is_even(int x) {
-	if (x % 2 == 0) return true;
-	else return false;
+	if (x % 2 == 0) 
+		return true;
+	else 
+		return false;
 }
-static bool is_rigth(int x, string answer)
+bool is_rigth(int x, string answer)
 {
 	if (answer == "yes") {
-		if (is_even(x) == true) {
+		if (is_even(x)) {
 			return true;
 		}
 		else {
@@ -40,7 +42,7 @@ static bool is_rigth(int x, string answer)
 		}
 	}
 	else if (answer == "no") {
-		if (is_even(x) == true) {
+		if (is_even(x)) {
 			Right = "yes";
 			return false;
 		}
@@ -54,7 +56,7 @@ static bool is_rigth(int x, string answer)
 		return 0;
 	}
 }
-static void test_game()
+void test_game()
 {
 	assert(is_rigth(3, "yes") == false);
 	assert(is_rigth(10, "yes") == true);
