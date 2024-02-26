@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<cassert>
 using namespace std;
 string Name;
 string Answer;
@@ -43,4 +44,11 @@ static bool is_rigth(int x, string answer)
 		cout << "Invalid answer\n";
 		return 0;
 	}
+}
+static void test_game()
+{
+	assert(is_rigth(3, "yes") == false);
+	assert(is_rigth(10, "yes") == true);
+	assert(is_rigth(3, "no") == true);
+	assert(is_rigth(10, "no") == false);
 }

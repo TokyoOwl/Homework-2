@@ -1,10 +1,24 @@
 #include<vector>
+#include<cassert>
 using namespace std;
 vector<int> numbers, numbers_square, numbers_sum, numbers_even, numbers_prime;
-auto square = [](int x) -> int {return x * x; };
-auto sum = [](int x) -> int {return x + x; };
-auto is_even = [](int x) -> bool {if (x % 2 == 0) { return true; } else { return false; }};
-auto is_prime = [](int x) ->bool {for (int i = 2; i < x; i++)if (x % i == 0)return false; return true; };
+using namespace std;
+int square(int x) {
+	return x * x;
+}
+int sum(int x) {
+	return x + x;
+}
+bool is_even(int x) {
+	if (x % 2 == 0) { return true; }
+	else { return false; }
+}
+bool is_prime(int x) {
+	for (int i = 2; i < x; i++)
+		if (x % i == 0)
+			return false;
+	return true;
+}
 void fill_numbers()
 {
 	for (int i = 0; i < 10; i++)
@@ -48,4 +62,27 @@ vector<int> filter(vector<int> numbers, bool(*fun)(int))
 			result[i] = numbers[i];
 	}
 	return result;
+}
+
+void test_math()
+{
+	assert(square(1) == 1);
+	assert(sum(1) == 2);
+}
+void test_logic()
+{
+	assert(is_even(8) == true);
+	assert(is_even(9) == false);
+	assert(is_prime(7) == true);
+	assert(is_prime(4) == false);
+}
+void test_map()
+{
+	assert(map(numbers, square) == numbers_square);
+	assert(map(numbers, sum) == numbers_sum);
+}
+void test_filter()
+{
+	assert(filter(numbers, is_even) == numbers_even);
+	assert(filter(numbers, is_prime) == numbers_prime);
 }
