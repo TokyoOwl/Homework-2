@@ -3,7 +3,6 @@
 using namespace std;
 int main()
 {
-	setlocale(LC_ALL, "Rus");
 	test_math();
 	cout << "Tests for math funcs: OK\n";
 	test_logic();
