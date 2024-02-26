@@ -1,4 +1,4 @@
-#include "tests.h"
+#include "tests.cpp"
 #include <iostream>
 using namespace std;
 int main()

@@ -1,8 +1,10 @@
 #include<vector>
-#include"test.h"
 using namespace std;
 vector<int> numbers, numbers_square, numbers_sum, numbers_even, numbers_prime;
-
+auto square = [](int x) -> int {return x * x; };
+auto sum = [](int x) -> int {return x + x; };
+auto is_even = [](int x) -> bool {if (x % 2 == 0) { return true; } else { return false; }};
+auto is_prime = [](int x) ->bool {for (int i = 2; i < x; i++)if (x % i == 0)return false; return true; };
 void fill_numbers()
 {
 	for (int i = 0; i < 10; i++)
