@@ -37,13 +37,13 @@ vector<int>  sum_numbers(vector<int> numbers, vector<int> numbers_sum)
 vector<int>  even_numbers(vector<int> numbers, vector<int> numbers_even)
 {
 	for (int i = 0; i < size(numbers); i++)
-		numbers_even.push_back((numbers[i]));
+		numbers_even.push_back(is_even(numbers[i]));
 	return numbers_even;
 }
 vector<int>  prime_numbers(vector<int> numbers, vector<int> numbers_prime)
 {
 	for (int i = 0; i < size(numbers); i++)
-		numbers_prime.push_back((numbers[i]));
+		numbers_prime.push_back(is_prime(numbers[i]));
 	return numbers_prime;
 }
 vector<int> map(vector<int> numbers, int(*fun)(int))
