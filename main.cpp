@@ -1,15 +1,14 @@
 #include <iostream>
 #include "test.h"
-using namespace std;
 int main()
 {
-	test_math();
-	cout << "Tests for math funcs: OK\n";
-	test_logic();
-	cout << "Tests for logic funcs: OK\n";
-	test_map();
-	cout << "Tests for func map: OK\n";
-	test_filter();
-	cout << "Tests for func filter: OK\n";
+	test::test_math();
+	std::cout << "Tests for math funcs: OK\n";
+	test::test_logic();
+	std::cout << "Tests for logic funcs: OK\n";
+	test::test_map();
+	std::cout << "Tests for func map: OK\n";
+	test::test_filter();
+	std::cout << "Tests for func filter: OK\n";
 	return 0;
 }
