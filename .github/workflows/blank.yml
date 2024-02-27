@@ -25,8 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Compile C++ code
-        run: g++ mainfunctions.h maintests.cpp main.cpp
-
+        run: g++ functions.h functions.cpp test.h test.cpp main.cpp
       # Runs a set of commands using the runners shell
       - name: Run program
         run: ./a.out
