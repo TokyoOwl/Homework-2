@@ -51,7 +51,7 @@ vector<int> map(vector<int> numbers, int(*fun)(int))
 	vector<int> result;
 	for (int i = 0; i < size(numbers); i++)
 	{
-		result[i] = fun(numbers[i]);
+		result.push_back(fun(numbers[i]));
 	}
 	return result;
 }
@@ -61,7 +61,7 @@ vector<int> filter(vector<int> numbers, bool(*fun)(int))
 	for (int i = 0; i < size(numbers); i++)
 	{
 		if (fun(numbers[i]) == true)
-			result[i] = numbers[i];
+			result.push_back(fun(numbers[i]));
 	}
 	return result;
 }
