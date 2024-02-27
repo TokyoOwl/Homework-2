@@ -1,33 +1,36 @@
-#include<iostream>
 #include<windows.h>
-#include"game.h"
-using namespace std;
+#include"game_func.h"
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "Rus");
-	test_game();
-	cout << "Тест игры: OK\n";
-	cout << "Добро пожаловать на интеллектуальную игру!\nКак я могу к вам обращаться? ";
-	get_name();
-	cout << "\nПривет, " << Name << "!";
-	cout << "\nОтвечайте 'yes' если число чётное, отвечайте 'no' если нет.\n";
+	//test_game();
+	//cout << "Тест игры: OK\n";
+	std::cout << "Добро пожаловать на интеллектуальную игру!\nКак я могу к вам обращаться? ";
+	std::string name = game::get_name();
+	std::cout << "\nПривет, " << name << "!";
+	std::cout << "\nОтвечайте 'yes' если число чётное, отвечайте 'no' если нет.\n";
 	for (int i = 0; i < 3; i++)
 	{
-		int q = rand_int(0, 100);
-		cout << "Число: "<< q <<"\nчётное? - ";
-		get_answ();
-		if (is_rigth(q, Answer) == true)
+		int q = game::rand_int(0, 100);
+		std::cout << "Число: "<< q <<"\nчётное? - ";
+		std::string answ = game::get_answ();
+		std::string right;
+		if (game::is_rigth(q, answ) == true)
 		{
-			cout << "Верно!\n";
+			std::cout << "Верно!\n";
 		}
 		else
 		{
-			cout << "'" << Answer << "' неправильный ответ, правльный ответ " << "'" << Right << "'.\nПопробуйте ещё раз, " << Name << "!";
+			if (answ == "yes")
+				right = "no";
+			else
+				right = "yes";
+			std::cout << "'" << answ << "' неправильный ответ, правльный ответ " << "'" << right << "'.\nПопробуйте ещё раз, " << name << "!";
 			return 0;
 		}
 	}
-	cout << "Поздравляю, " << Name << "!";
+	std::cout << "Поздравляю, " << name << "!";
 	return 0;
 }
