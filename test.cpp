@@ -1,4 +1,5 @@
 #include<cassert>
+#include<iostream>
 #include"functions.h"
 using namespace std;
 vector<int> numbers = fill_numbers(numbers);
@@ -25,6 +26,13 @@ void test_map()
 }
 void test_filter()
 {
+	vector<int> result = filter(numbers, is_even);
+	for (int i = 0; i < size(numbers_even); i++)
+	{
+		cout << numbers_even[i] << endl << result[i];
+		
+	}
+	
 	assert(filter(numbers, is_even) == numbers_even);
 	assert(filter(numbers, is_prime) == numbers_prime);
 }

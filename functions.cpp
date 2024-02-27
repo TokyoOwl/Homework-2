@@ -63,7 +63,7 @@ vector<int> filter(vector<int> numbers, bool(*fun)(int))
 	for (int i = 0; i < size(numbers); i++)
 	{
 		if (fun(numbers[i]) == true)
-			result.push_back(fun(numbers[i]));
+			result.push_back((numbers[i]));
 	}
 	return result;
 }
