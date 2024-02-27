@@ -6,7 +6,6 @@ vector<int> numbers_square = square_numbers(numbers, numbers_square);
 vector<int> numbers_sum = sum_numbers(numbers, numbers_sum);
 vector<int> numbers_even = even_numbers(numbers, numbers_even);
 vector<int> numbers_prime = prime_numbers(numbers, numbers_prime);
-
 void test_math()
 {
 	assert(square(1) == 1);

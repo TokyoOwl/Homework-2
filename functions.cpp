@@ -22,28 +22,30 @@ vector<int> fill_numbers(vector<int> numbers)
 		numbers.push_back(i);
 	return numbers;
 }
-vector<int>  square_numbers(vector<int> numbers, vector<int> numbers_square)
+vector<int> square_numbers(vector<int> numbers, vector<int> numbers_square)
 {
 	for (int i = 0; i < size(numbers); i++)
 		numbers_square.push_back(square(numbers[i]));
 	return numbers_square;
 }
-vector<int>  sum_numbers(vector<int> numbers, vector<int> numbers_sum)
+vector<int> sum_numbers(vector<int> numbers, vector<int> numbers_sum)
 {
 	for (int i = 0; i < size(numbers); i++)
 		numbers_sum.push_back(sum(numbers[i]));
 	return numbers_sum;
 }
-vector<int>  even_numbers(vector<int> numbers, vector<int> numbers_even)
+vector<int> even_numbers(vector<int> numbers, vector<int> numbers_even)
 {
 	for (int i = 0; i < size(numbers); i++)
-		numbers_even.push_back(is_even(numbers[i]));
+		if(is_even(numbers[i]))
+			numbers_even.push_back(numbers[i]);
 	return numbers_even;
 }
-vector<int>  prime_numbers(vector<int> numbers, vector<int> numbers_prime)
+vector<int> prime_numbers(vector<int> numbers, vector<int> numbers_prime)
 {
 	for (int i = 0; i < size(numbers); i++)
-		numbers_prime.push_back(is_prime(numbers[i]));
+		if (is_prime(numbers[i]))
+			numbers_prime.push_back(numbers[i]);
 	return numbers_prime;
 }
 vector<int> map(vector<int> numbers, int(*fun)(int))
