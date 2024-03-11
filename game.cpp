@@ -5,8 +5,6 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "Rus");
-	//test_game();
-	//cout << "Тест игры: OK\n";
 	std::cout << "Добро пожаловать на интеллектуальную игру!\nКак я могу к вам обращаться? ";
 	std::string name = game::get_name();
 	std::cout << "\nПривет, " << name << "!";

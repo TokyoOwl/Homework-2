@@ -31,7 +31,8 @@ namespace game
 	}
 	bool is_rigth(int number, std::string answer)
 	{
-		if (answer == "yes") {
+		if (answer == "yes") {		// Число чётное: 1. Ответ да - return true; 2. Ответ нет return false; 
+									// Число не чётное 1.Ответ да - return false; 2. Ответ нет return true;
 			if (is_even(number)) {
 				return true;
 			}
